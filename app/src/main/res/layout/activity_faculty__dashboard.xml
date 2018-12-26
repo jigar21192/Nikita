@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Faculty_Dashboard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_dashboard"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/firstLayout"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- place one TextView and one EditText inside layout using weight property -->
+
+            <ImageView
+                android:id="@+id/Syllabus"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/can1"
+                android:background="@drawable/background_white"
+                android:padding="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp" />
+            <!--<TextView
+                android:textSize="15dp"
+                android:textColor="#0d0d0d"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Syllabus"
+                android:text="Syllabus"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />-->
+
+            <ImageView
+                android:id="@+id/Material"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/can1"
+                android:background="@drawable/background_white"
+                android:padding="5dp"
+                android:layout_marginLeft="40dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"/>
+
+            <ImageView
+                android:id="@+id/Schedule"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/can1"
+                android:background="@drawable/background_white"
+                android:padding="5dp"
+                android:layout_marginLeft="40dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/secondLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- place one TextView and one EditText inside layout using weight property -->
+
+            <TextView
+                android:textSize="17dp"
+                android:textColor="#0d0d0d"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Syllabus"
+                android:text="Syllabus"
+                android:gravity="center"
+                android:textStyle="italic|bold"
+                android:layout_marginLeft="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="17dp"
+                android:textColor="#0d0d0d"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Material"
+                android:text="Material"
+                android:gravity="center"
+                android:layout_marginLeft="67dp"
+                android:textStyle="italic|bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="17dp"
+                android:textColor="#0d0d0d"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Schedule"
+                android:text="Schedule"
+                android:gravity="center"
+                android:layout_marginLeft="70dp"
+                android:textStyle="bold|italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/thirdLayout"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- place one TextView and one EditText inside layout using weight property -->
+
+            <ImageView
+                android:id="@+id/Myprogress"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/can1"
+                android:background="@drawable/background_white"
+                android:padding="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp" />
+
+
+            <ImageView
+                android:id="@+id/Attendence"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/can1"
+                android:background="@drawable/background_white"
+                android:padding="5dp"
+                android:layout_marginLeft="40dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"/>
+
+            <ImageView
+                android:id="@+id/Test"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/can1"
+                android:background="@drawable/background_white"
+                android:padding="5dp"
+                android:layout_marginLeft="40dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fourthLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- place one TextView and one EditText inside layout using weight property -->
+
+            <TextView
+                android:textSize="17dp"
+                android:textColor="#0d0d0d"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Syllabus"
+                android:text="My Progress"
+                android:gravity="center"
+                android:textStyle="italic|bold"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="17dp"
+                android:textColor="#0d0d0d"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Material"
+                android:text="Attendence"
+                android:gravity="center"
+                android:layout_marginLeft="35dp"
+                android:textStyle="italic|bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="17dp"
+                android:textColor="#0d0d0d"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Schedule"
+                android:text="Test"
+                android:gravity="center"
+                android:layout_marginLeft="70dp"
+                android:textStyle="bold|italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fifthLayout"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- place one TextView and one EditText inside layout using weight property -->
+
+            <ImageView
+                android:id="@+id/FFeedfack"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/can1"
+                android:background="@drawable/background_white"
+                android:padding="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp" />
+
+
+            <ImageView
+                android:id="@+id/Vedio"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/can1"
+                android:background="@drawable/background_white"
+                android:padding="5dp"
+                android:layout_marginLeft="40dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"/>
+
+            <ImageView
+                android:id="@+id/Fees"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/can1"
+                android:background="@drawable/background_white"
+                android:padding="5dp"
+                android:layout_marginLeft="40dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/sixthLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- place one TextView and one EditText inside layout using weight property -->
+
+            <TextView
+                android:textSize="17dp"
+                android:textColor="#0d0d0d"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Syllabus"
+                android:text=" Feedback"
+                android:gravity="center"
+                android:textStyle="italic|bold"
+                android:layout_marginLeft="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="17dp"
+                android:textColor="#0d0d0d"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Material"
+                android:text="Video"
+                android:gravity="center"
+                android:layout_marginLeft="67dp"
+                android:textStyle="italic|bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="17dp"
+                android:textColor="#0d0d0d"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Schedule"
+                android:text="Fees"
+                android:gravity="center"
+                android:layout_marginLeft="90dp"
+                android:textStyle="bold|italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/seventhLayout"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- place one TextView and one EditText inside layout using weight property -->
+
+            <ImageView
+                android:id="@+id/Event"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/can1"
+                android:background="@drawable/background_white"
+                android:padding="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp" />
+
+
+            <ImageView
+                android:id="@+id/Homework"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/can1"
+                android:background="@drawable/background_white"
+                android:padding="5dp"
+                android:layout_marginLeft="40dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"/>
+
+            <ImageView
+                android:id="@+id/Result"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/can1"
+                android:background="@drawable/background_white"
+                android:padding="5dp"
+                android:layout_marginLeft="40dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/eightLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- place one TextView and one EditText inside layout using weight property -->
+
+            <TextView
+                android:textSize="17dp"
+                android:textColor="#0d0d0d"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Syllabus"
+                android:text="Event"
+                android:gravity="center"
+                android:textStyle="italic|bold"
+                android:layout_marginLeft="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="17dp"
+                android:textColor="#0d0d0d"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Material"
+                android:text="Homework"
+                android:gravity="center"
+                android:layout_marginLeft="70dp"
+                android:textStyle="italic|bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="17dp"
+                android:textColor="#0d0d0d"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Schedule"
+                android:text="Result"
+                android:gravity="center"
+                android:layout_marginLeft="70dp"
+                android:textStyle="bold|italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
