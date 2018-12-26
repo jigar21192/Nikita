@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,10 +15,28 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Ranker_list extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    List<Model_Ranker_list>list=new ArrayList<>();
         Button signup,login;
+        String Ranker_URL="https://ims-i-can.000webhostapp.com/rankerlist.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +44,48 @@ public class Ranker_list extends AppCompatActivity
         setContentView(R.layout.activity_ranker_list);
         login=(Button)findViewById(R.id.login);
         signup=(Button)findViewById(R.id.signup);
+        final ListView listView=findViewById(R.id.list_ranker);
+
+        StringRequest request=new StringRequest(Request.Method.GET, Ranker_URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                try {
+                    JSONArray array=new JSONArray(response);
+                    for (int i=0;i<array.length();i++){
+                        JSONObject object=array.getJSONObject(i);
+                        String s_name=object.getString("student_name");
+                        String s_std=object.getString("student_std");
+                        String s_per=object.getString("student_percentage");
+
+                        Model_Ranker_list model=new Model_Ranker_list();
+                        model.setS_name(s_name);
+                        model.setS_std(s_std);
+                        model.setS_per(s_per);
+
+                        list.add(model);
+
+                        Base_Adapter_RankerList adapter_rankerList=new Base_Adapter_RankerList(Ranker_list.this,list);
+                        listView.setAdapter(adapter_rankerList);
+
+
+                    }
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                Toast.makeText(Ranker_list.this, error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        RequestQueue queue =Volley.newRequestQueue(Ranker_list.this);
+        queue.add(request);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
