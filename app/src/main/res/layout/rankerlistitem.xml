@@ -14,38 +14,53 @@
         <!-- place one TextView and one EditText inside layout using weight property -->
 
         <ImageView
-            android:id="@+id/Ranker"
-            android:layout_marginTop="20dp"
+            android:id="@+id/stud1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/can1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
             android:background="@drawable/background_white"
             android:padding="5dp"
-            android:layout_marginLeft="20dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:src="@drawable/student" />
 
-        <EditText
-            android:id="@+id/Rname"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_weight="1.4"
-            android:hint="2135251"
-            android:imeOptions="actionNext"
-            android:paddingLeft="10dp"
-            android:singleLine="true" />
-        <EditText
-            android:id="@+id/Percentage"
-            android:layout_width="20dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="Student Name"
+            android:textColor="#0d0d0d"
+            android:textSize="17dp"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_weight="1.4"
-            android:hint="2135251"
-            android:imeOptions="actionNext"
-            android:paddingLeft="10dp"
-            android:singleLine="true" />
+            android:gravity="center"
+            android:text="Standard"
+            android:textColor="#0d0d0d"
+            android:textSize="17dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text=" %"
+            android:textColor="#0d0d0d"
+            android:textSize="17dp"
+            android:textStyle="bold|italic" />
+
+
     </LinearLayout>
 
 </RelativeLayout>

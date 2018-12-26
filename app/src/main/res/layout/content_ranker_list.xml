@@ -35,19 +35,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="50dp"
         android:layout_marginTop="130dp"
         android:background="@drawable/background_white"
         android:orientation="vertical"
         android:padding="20dp"
         android:layout_alignParentLeft="true">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none">
+
     <!-- LinearLayout Inside ScrollView -->
-    <LinearLayout
+   <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -113,12 +110,21 @@
 
 
         </LinearLayout>
+   </LinearLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp">
+
+        </ListView>
+
+
 
 
         <LinearLayout
             android:id="@+id/eightLayout"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -135,7 +141,7 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="0dp"
                 android:layout_marginLeft="50dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="1dp"
                 android:background="@drawable/rec_gradient"
                 android:text="SignIn"
                 android:textAllCaps="false"
@@ -148,18 +154,19 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="0dp"
+                android:layout_marginTop="1dp"
                 android:layout_marginLeft="100dp"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/rec_gradient"
                 android:text=" SignUp"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
                 android:textSize="15dp" />
+
+
         </LinearLayout>
 
     </LinearLayout>
-    </ScrollView>
-    </LinearLayout>
+
     <ImageView
         android:id="@+id/imageVIew"
         android:layout_marginTop="20dp"
