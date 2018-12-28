@@ -34,7 +34,8 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_marginBottom="150dp"
-        android:layout_marginTop="125dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="5dp"
         android:background="@drawable/background_white"
         android:orientation="vertical"
         android:padding="20dp"
@@ -512,6 +513,7 @@
 
     <TextView
         android:textSize="20dp"
+        android:id="@+id/textView"
         android:textColor="#FFF"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/imageVIew"
