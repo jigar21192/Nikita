@@ -14,13 +14,12 @@
         <!-- place one TextView and one EditText inside layout using weight property -->
 
         <ImageView
-            android:id="@+id/stud1"
+            android:id="@+id/stu1"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="0dp"
-            android:background="@drawable/background_white"
             android:padding="5dp"
             android:src="@drawable/student" />
 

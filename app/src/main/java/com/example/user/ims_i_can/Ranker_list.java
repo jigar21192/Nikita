@@ -56,11 +56,13 @@ public class Ranker_list extends AppCompatActivity
                         JSONObject object=array.getJSONObject(i);
                         String s_name=object.getString("student_name");
                         String s_std=object.getString("student_std");
+                        String s_pick=object.getString("student_pik");
                         String s_per=object.getString("student_percentage");
 
                         Model_Ranker_list model=new Model_Ranker_list();
                         model.setS_name(s_name);
                         model.setS_std(s_std);
+                        model.setS_pick(s_pick);
                         model.setS_per(s_per);
 
                         list.add(model);
