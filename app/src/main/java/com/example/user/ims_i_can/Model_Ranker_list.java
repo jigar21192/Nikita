@@ -2,7 +2,15 @@ package com.example.user.ims_i_can;
 
 public class Model_Ranker_list {
 
-    String s_name,s_std,s_per;
+    String s_name,s_std,s_per,s_pick;
+
+    public String getS_pick() {
+        return s_pick;
+    }
+
+    public void setS_pick(String s_pick) {
+        this.s_pick = s_pick;
+    }
 
     public String getS_name() {
         return s_name;
