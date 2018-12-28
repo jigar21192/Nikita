@@ -24,7 +24,7 @@
             android:src="@drawable/student" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="20dp"
@@ -37,11 +37,11 @@
             android:textStyle="italic|bold" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:id="@+id/s_std"
             android:text="Standard"
@@ -50,7 +50,7 @@
             android:textStyle="bold|italic" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="30dp"

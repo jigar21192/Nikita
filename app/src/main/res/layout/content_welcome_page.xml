@@ -37,7 +37,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="150dp"
-        android:layout_marginTop="150dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="5dp"
         android:background="@drawable/background_white"
         android:orientation="vertical"
         android:padding="20dp"
@@ -96,6 +97,7 @@
         android:layout_height="80dp" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageVIew"

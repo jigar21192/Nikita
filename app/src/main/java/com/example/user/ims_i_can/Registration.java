@@ -25,8 +25,9 @@ import java.util.Locale;
 public class Registration extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener {
     Button Btn;
-    EditText Fname, Lname, EnrNo, Bdate, Email, Mobno, Pmobno, Address;
-    Spinner State, City;
+    EditText Fname, Lname, EnrNo, Bdate, Email, Mobno, Pmobno, Address,Area;
+
+    String gen,spi,spi2;
     RadioButton Rmale, Rfemale;
     RadioGroup Rgroup;
     Spinner state,city;
@@ -43,6 +44,7 @@ public class Registration extends AppCompatActivity implements
         Lname = (EditText) findViewById(R.id.Lname);
         EnrNo = (EditText) findViewById(R.id.EnrNo);
         Bdate = (EditText) findViewById(R.id.Bdate);
+        Area = (EditText) findViewById(R.id.area);
         Mobno = (EditText) findViewById(R.id.Mobno);
         Pmobno = (EditText) findViewById(R.id.Pmobno);
         Rmale= findViewById(R.id.Rmale);
@@ -80,9 +82,6 @@ public class Registration extends AppCompatActivity implements
         Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(Registration.this, Registration_Detail.class);
-
                 String fname1=Fname.getText().toString();
                 String lname1=Lname.getText().toString();
                 String enrno1=EnrNo.getText().toString();
@@ -90,6 +89,29 @@ public class Registration extends AppCompatActivity implements
                 String pmobno1=Pmobno.getText().toString();
                 String address1=Address.getText().toString();
                 String email1=Email.getText().toString();
+                String bdate1=Bdate.getText().toString();
+                String area1=Area.getText().toString();
+
+
+
+                Intent intent = new Intent(Registration.this, Registration_Detail.class);
+                intent.putExtra("fname",fname1);
+                intent.putExtra("enrNo",enrno1);
+                intent.putExtra("lname",lname1);
+                intent.putExtra("bdate",bdate1);
+                intent.putExtra("mobno",mobno1);
+                intent.putExtra("pmobno",pmobno1);
+                intent.putExtra("address",address1);
+                intent.putExtra("email",email1);
+                intent.putExtra("area",area1);
+                intent.putExtra("gender",gen);
+                intent.putExtra("state",spi);
+                intent.putExtra("city",spi2);
+
+
+
+
+
 
                 startActivity(intent);
 
@@ -101,7 +123,7 @@ public class Registration extends AppCompatActivity implements
                     Toast.makeText(Registration.this,"Nothing selected", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(Registration.this,Rmale.getText(), Toast.LENGTH_SHORT).show();
+                    gen=Rmale.getText().toString();
                 }
 
 
@@ -164,6 +186,15 @@ public class Registration extends AppCompatActivity implements
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        Spinner spin=(Spinner)adapterView;
+        Spinner spin2=(Spinner)adapterView;
+        if (spin.getId()==R.id.State){
+            spi=statename[i];
+
+        }if (spin2.getId()==R.id.City){
+            spi2=cityname[i];
+
+        }
 
     }
 
