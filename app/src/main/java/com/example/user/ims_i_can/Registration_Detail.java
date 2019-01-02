@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Registration_Detail extends AppCompatActivity {
     Button Login;
@@ -20,7 +21,7 @@ public class Registration_Detail extends AppCompatActivity {
         lname=(TextView)findViewById(R.id.Lname);
         bdate=(TextView)findViewById(R.id.Bdate);
         fname=(TextView)findViewById(R.id.Fname);
-        email=(TextView)findViewById(R.id.email);
+        email=(TextView)findViewById(R.id.Email);
         address=(TextView)findViewById(R.id.Address);
         mobno=(TextView)findViewById(R.id.Mobno);
         pmobno=(TextView)findViewById(R.id.Pmobno);
@@ -45,8 +46,7 @@ public class Registration_Detail extends AppCompatActivity {
         String gen=getIntent().getStringExtra("gender");
         String spi=getIntent().getStringExtra("state");
         String spi2=getIntent().getStringExtra("city");
-
-
+        Toast.makeText(this, gen, Toast.LENGTH_SHORT).show();
         fname.setText(fname1);
         enrNo.setText(enrno1);
         lname.setText(lanme1);

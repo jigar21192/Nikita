@@ -18,9 +18,10 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="0dp"
             android:padding="5dp"
+            android:background="@drawable/background_images"
             android:src="@drawable/student" />
 
         <TextView
@@ -41,10 +42,10 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:id="@+id/s_std"
-            android:text="Standard"
+            android:text="S_std"
             android:textColor="#0d0d0d"
             android:textSize="17dp"
             android:textStyle="bold|italic" />
@@ -57,7 +58,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:id="@+id/s_per"
-            android:text=" %"
+            android:text=" S_%"
             android:textColor="#0d0d0d"
             android:textSize="17dp"
             android:textStyle="bold|italic" />
